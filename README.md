@@ -1,2 +1,1 @@
-# sd_class_ufr
-# sd_class_ufr
+# Aula de Sistemas Distribuídos (2024-1)
