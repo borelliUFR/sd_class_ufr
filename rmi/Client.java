@@ -1,12 +1,13 @@
-import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class Client {
-
     public static void main(String[] args) {
         try {
-            // Obtém o registro RMI na porta 1099
-            Registry reg = LocateRegistry.getRegistry("localhost");
+            // Cria um gerenciador de cliente RMI para se conectar ao registro RMI
+            RMIClientManager clientManager = new RMIClientManager();
+            
+            // Obtém o registro do gerenciador
+            Registry reg = clientManager.getRegistry();
 
             // Busca o objeto remoto "Hello" no registro
             Hello obj = (Hello) reg.lookup("Hello");
