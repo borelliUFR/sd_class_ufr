@@ -4,7 +4,7 @@ import java.rmi.registry.Registry;
 public class RMIClientManager {
     private Registry registry;
 
-    private String host = "localhost";
+    private String host = "localhost" ;
     private int port = 1099;
 
     public RMIClientManager() {
